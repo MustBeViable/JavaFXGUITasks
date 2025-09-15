@@ -10,7 +10,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.geometry.Insets;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 import java.util.ArrayList;
@@ -23,10 +26,10 @@ public class CurrencyView extends Application {
 
     @Override
     public void start(Stage stage) {
-        Label convertableMoneyText = new Label("Enter your money");
+        Label convertableMoneyText = new Label("Enter your money  ");
         TextField convertableMoney = new TextField();
-        Label convertToText = new Label("Covert to:");
-        FlowPane pane = new FlowPane();
+        Label convertToText = new Label("Covert to:  ");
+        BorderPane layout = new BorderPane();
         Button eur = new Button("€");
         Button dol = new Button("$");
         Button pound = new Button("£");
@@ -52,18 +55,26 @@ public class CurrencyView extends Application {
         this.currencyConvRate.setMinWidth(30);
         this.currencyConvRate.setAlignment(Pos.CENTER);
 
-        pane.getChildren().add(convertableMoneyText);
-        pane.getChildren().add(convertableMoney);
-        pane.getChildren().add(eur);
-        pane.getChildren().add(dol);
-        pane.getChildren().add(pound);
-        pane.getChildren().add(convertToText);
-        pane.getChildren().add(toEur);
-        pane.getChildren().add(toDol);
-        pane.getChildren().add(toPound);
-        pane.getChildren().add(this.currencyConvRate);
-        pane.getChildren().add(this.currencyConverted);
-        Scene scene = new Scene(pane);
+        HBox top = new HBox();
+
+        top.getChildren().add(convertableMoneyText);
+        top.getChildren().add(convertableMoney);
+        top.getChildren().add(eur);
+        top.getChildren().add(dol);
+        top.getChildren().add(pound);
+        layout.setTop(top);
+
+
+        HBox center = new HBox();
+        center.getChildren().add(convertToText);
+        center.getChildren().add(toEur);
+        center.getChildren().add(toDol);
+        center.getChildren().add(toPound);
+        center.getChildren().add(this.currencyConvRate);
+        center.getChildren().add(this.currencyConverted);
+        layout.setCenter(center);
+
+        Scene scene = new Scene(layout);
         stage.setScene(scene);
         stage.setTitle("Currency converter");
         stage.show();
@@ -121,7 +132,7 @@ public class CurrencyView extends Application {
     }
 
     public void showConvertedMoney(String rate, String converted) {
-        this.currencyConvRate.setText("Conversion rate: " + rate);
-        this.currencyConverted.setText("Conversion value: " + converted);
+        this.currencyConvRate.setText(rate);
+        this.currencyConverted.setText(converted);
     }
 }

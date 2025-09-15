@@ -76,13 +76,13 @@ public class CurrencyController {
                 if (c.getConvertThis()) {
                     switch (c.getCurrency()) {
                         case "dollar":
-                            view.showConvertedMoney(String.valueOf(conv.getDOLLAR_EUR()), String.valueOf(conv.dollarToEur(money)));
+                            view.showConvertedMoney("Conv rate " + String.valueOf(conv.getDOLLAR_EUR()), " Converted value: " + String.valueOf(conv.dollarToEur(money)) + "€");
                             break;
                         case "pound":
-                            view.showConvertedMoney(String.valueOf(conv.getPOUNDS_EUR()), String.valueOf(conv.dollarToPounds(money)));
+                            view.showConvertedMoney("Conv rate " + String.valueOf(conv.getPOUNDS_EUR()), " Converted value: " + String.valueOf(conv.dollarToPounds(money)) + "€");
                             break;
                         default:
-                            view.showConvertedMoney("", "Something went wrong");
+                            view.showConvertedMoney("", "You are trying to convert to same currency");
                     }
                 }
             }
@@ -105,13 +105,13 @@ public class CurrencyController {
                 if (c.getConvertThis()) {
                     switch (c.getCurrency()) {
                         case "pound":
-                            view.showConvertedMoney(String.valueOf(conv.getPOUNDS_DOLLAR()), String.valueOf(conv.poundsToDollar(money)));
+                            view.showConvertedMoney("Conv rate " + String.valueOf(conv.getPOUNDS_DOLLAR()), " Converted value: " + String.valueOf(conv.poundsToDollar(money)) + "$");
                             break;
                         case "euro":
-                            view.showConvertedMoney(String.valueOf(conv.getEUR_DOLLAR()), String.valueOf(conv.eurToDollar(money)));
+                            view.showConvertedMoney("Conv rate " + String.valueOf(conv.getEUR_DOLLAR()),  " Converted value: " + String.valueOf(conv.eurToDollar(money)) + "$");
                             break;
                         default:
-                            view.showConvertedMoney("", "Something went wrong");
+                            view.showConvertedMoney("", "You are trying to convert to same currency");
                     }
                 }
             }
@@ -134,13 +134,13 @@ public class CurrencyController {
                 if (c.getConvertThis()) {
                     switch (c.getCurrency()) {
                         case "dollar":
-                            view.showConvertedMoney(String.valueOf(conv.getDOLLAR_POUNDS()), String.valueOf(conv.dollarToPounds(money)));
+                            view.showConvertedMoney("Conv rate " + String.valueOf(conv.getDOLLAR_POUNDS()), " Converted value: " + String.valueOf(conv.dollarToPounds(money)) + "£");
                             break;
                         case "euro":
-                            view.showConvertedMoney(String.valueOf(conv.getEUR_POUNDS()), String.valueOf(conv.dollarToEur(money)));
+                            view.showConvertedMoney("Conv rate " + String.valueOf(conv.getEUR_POUNDS()), " Converted value: " + String.valueOf(conv.dollarToEur(money)) + "£");
                             break;
                         default:
-                            view.showConvertedMoney("", "Something went wrong");
+                            view.showConvertedMoney("", "You are trying to convert to same currency");
                     }
                 }
             }
