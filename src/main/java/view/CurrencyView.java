@@ -28,7 +28,7 @@ public class CurrencyView extends Application {
     public void start(Stage stage) {
         Label convertableMoneyText = new Label("Enter your money  ");
         TextField convertableMoney = new TextField();
-        Label convertToText = new Label("Covert to:  ");
+        Label convertToText = new Label("Convert:  ");
         BorderPane layout = new BorderPane();
         Button eur = new Button("€");
         Button dol = new Button("$");

@@ -5,7 +5,6 @@ import model.CurrencyConverter;
 import view.CurrencyView;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class CurrencyController {
     private static double currentCovertedMoneyValue;
