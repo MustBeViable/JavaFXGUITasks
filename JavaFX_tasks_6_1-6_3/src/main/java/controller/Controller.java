@@ -9,9 +9,9 @@ public class Controller {
     private MouseLocation playersMouse;
     private PetLocation pet;
     private PetView gui;
-    private static final double DISTANCE_SCALER = 0.000001;
+    private static final double DISTANCE_SCALER = 1;
     double eps = 0.5;
-    double maxLeap = 1.0;
+    double maxLeap = 0.01;
     public Controller(PetView gui) {
         this.playersMouse = new MouseLocation(0, 0);
         this.pet = new PetLocation(0,0);
@@ -39,12 +39,13 @@ public class Controller {
         double newY = pet.getY() + ((distY / dist) * leap);
         pet.setX(newX);
         pet.setY(newY);
-
+        /*
         try {
             Thread.sleep(1);
         } catch (InterruptedException e) {
             System.out.println(e.getMessage());
         }
+        */
         Platform.runLater(() -> gui.updateCanvas(pet.getX(), pet.getY()));
     }
 

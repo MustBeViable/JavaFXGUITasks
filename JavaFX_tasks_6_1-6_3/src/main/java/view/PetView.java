@@ -16,7 +16,7 @@ public class PetView extends Application {
     private GraphicsContext gc;
     private static final int SIZE_V = 1000;
     private static final int SIZE_V1 = 800;
-    private static final Image CUTE_PET = new Image("/cute_pet.jpg");
+    private static final Image CUTE_PET = new Image("/cute_pet1.jpg");
 
     @Override
     public void init() throws Exception {
