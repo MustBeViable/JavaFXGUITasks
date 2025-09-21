@@ -1,5 +1,7 @@
 package controller;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -23,19 +25,54 @@ public class NoteController {
     private Label noteDisplayField, noteTitle1, noteTitle2, noteTitle3, noteTitle4, noteTitle5;
     @FXML
     private Label noteText1, noteText2, noteText3, noteText4, noteText5;
+    @FXML
+    private ListView<Note> listView;
+    private final ObservableList<Note> obsNotes = FXCollections.observableArrayList();
 
+    @FXML
+    private void initialize() {
+        obsNotes.setAll(notes.getNotes());
+        listView.setItems(obsNotes);
+        refreshNoteList();
+
+        listView.setCellFactory(v -> new ListCell<>() {
+            @Override protected void updateItem(Note n, boolean empty) {
+                super.updateItem(n, empty);
+                if (empty || n == null) {
+                    setText(null);
+                } else {
+                    setText(n.getTitle());
+                }
+            }
+        });
+
+        listView.getSelectionModel().selectedItemProperty().addListener((o, old, selected) -> {
+            if (selected == null) {
+                noteDisplayField.setText("");
+            } else {
+                noteDisplayField.setText(selected.getNote());
+            }
+        });
+
+        if (!obsNotes.isEmpty()) listView.getSelectionModel().selectFirst();
+    }
 
     @FXML
     private void addNote() {
         System.out.println("addNotessa");
         String title = addNoteTitle.getText();
         String note = writeNoteText.getText();
+        if (title.isEmpty()) {
+            return;
+        }
         if (notes.addNote(title,note)) {
             System.out.println("Yay onnistui");
         } else {
             System.out.println("Epäonnistui :(");
         }
         refreshNoteList();
+        ObservableList<Note> notes1 = FXCollections.observableArrayList(notes.getNotes());
+        listView.setItems(notes1);
     }
 
     @FXML
@@ -116,10 +153,6 @@ public class NoteController {
     private void deleteNote5() {
         notes.deleteNote(4);
         refreshNoteList();
-    }
-
-    public static void main(String[] args) {
-        NoteView.launch(NoteView.class);
     }
 
 }

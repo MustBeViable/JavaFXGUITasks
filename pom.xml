@@ -12,6 +12,7 @@
         <module>fmxl_stuff_6.4</module>
         <module>JavaFX_tasks_6_1-6_3</module>
         <module>NoteBook</module>
+        <module>7_1_DatabaseStuff</module>
     </modules>
 
     <properties>

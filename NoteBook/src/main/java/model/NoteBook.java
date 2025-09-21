@@ -40,6 +40,10 @@ public class NoteBook {
         }
     }
 
+    public ArrayList<Note> getNotes() {
+        return this.notes;
+    }
+
     private void addNotes() {
         notes.add(new Note("Ripuli", "Ripuli on märkää kakkaa"));
         notes.add(new Note("Kakka", "Kakka on kuivaa ripulia"));
@@ -48,5 +52,4 @@ public class NoteBook {
         notes.add(new Note("Tärkee!!", "En uskalla puhua tytöille :("));
         System.out.println(notes.size());
     }
-
 }

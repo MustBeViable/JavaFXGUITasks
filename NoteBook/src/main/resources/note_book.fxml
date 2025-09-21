@@ -72,6 +72,9 @@
          <center>
             <Label fx:id="noteDisplayField" alignment="TOP_LEFT" prefHeight="91.0" prefWidth="450.0" wrapText="true" BorderPane.alignment="CENTER" />
          </center>
+         <right>
+            <ListView fx:id="listView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </right>
       </BorderPane>
    </bottom>
    <center>
