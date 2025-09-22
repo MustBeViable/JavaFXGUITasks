@@ -2,9 +2,9 @@ DROP DATABASE IF EXISTS currencyconverter;
 CREATE DATABASE currencyconverter;
 USE currencyconverter;
 
-DROP TABLE IF EXISTS CURRENCY;
+DROP TABLE IF EXISTS currency;
 
-CREATE TABLE CURRENCY (
+CREATE TABLE currency (
     id INT NOT NULL AUTO_INCREMENT,
     currency_code VARCHAR(3) NOT NULL,
     currency_name VARCHAR(50) NOT NULL,
@@ -20,7 +20,7 @@ CREATE TABLE CURRENCY (
     UNIQUE KEY uq_currency_code (currency_code)
     );
 
-    INSERT INTO CURRENCY
+    INSERT INTO currency
     (currency_code, currency_name,
      rate_to_usd, rate_to_gbp, rate_to_eur, rate_to_jpy, rate_to_chf, rate_to_cad, rate_to_aud, rate_to_sgd)
     VALUES
@@ -58,15 +58,15 @@ GRANT SELECT ON currencyconverter.* TO 'appuser'@'localhost';
 
 /////////////////Tehtävän SQL queryt///////////////////////
 
-SELECT * FROM CURRENCY;
+SELECT * FROM currency;
 
-SELECT * FROM CURRENCY
+SELECT * FROM currency
 WHERE currency_code = 'EUR';
 
 SELECT COUNT(*) AS currency_count
-FROM CURRENCY;
+FROM currency;
 
 SELECT *
-FROM CURRENCY
+FROM currency
 ORDER BY rate_to_jpy DESC
 LIMIT 1;
