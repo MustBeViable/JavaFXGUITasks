@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="757.0" prefWidth="1126.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.NoteController">
    <top>
@@ -70,7 +71,10 @@
             <TextArea prefHeight="0.0" prefWidth="19.0" BorderPane.alignment="CENTER" />
          </bottom>
          <center>
-            <Label fx:id="noteDisplayField" alignment="TOP_LEFT" prefHeight="91.0" prefWidth="450.0" wrapText="true" BorderPane.alignment="CENTER" />
+            <Label fx:id="noteDisplayField" alignment="TOP_LEFT" prefHeight="91.0" prefWidth="450.0" wrapText="true" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
          </center>
          <right>
             <ListView fx:id="listView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
@@ -93,12 +97,18 @@
               <items>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                      <children>
-                        <TextField fx:id="addNoteTitle" layoutX="14.0" layoutY="6.0" prefHeight="25.0" prefWidth="451.0" />
+                        <TextField fx:id="addNoteTitle" layoutX="14.0" layoutY="6.0" prefHeight="25.0" prefWidth="451.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font></TextField>
                      </children>
                   </AnchorPane>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="497.0">
                      <children>
-                        <TextArea fx:id="writeNoteText" layoutX="13.0" layoutY="2.0" prefHeight="151.0" prefWidth="454.0" />
+                        <TextArea fx:id="writeNoteText" layoutX="13.0" layoutY="2.0" prefHeight="151.0" prefWidth="454.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font></TextArea>
                      </children>
                   </AnchorPane>
               </items>
@@ -108,11 +118,17 @@
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                      <children>
                         <Button layoutX="460.0" layoutY="1.0" mnemonicParsing="false" onAction="#deleteNote1" text="Delete" />
-                        <Label fx:id="noteTitle1" layoutX="7.0" layoutY="8.0" prefHeight="17.0" prefWidth="435.0" />
+                        <Label fx:id="noteTitle1" layoutX="7.0" layoutY="8.0" prefHeight="17.0" prefWidth="435.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font></Label>
                      </children></AnchorPane>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                      <children>
-                        <Label fx:id="noteText1" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="10.0" layoutY="7.0" prefHeight="178.0" prefWidth="438.0" wrapText="true" />
+                        <Label fx:id="noteText1" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="10.0" layoutY="7.0" prefHeight="178.0" prefWidth="438.0" wrapText="true">
+                           <font>
+                              <Font size="15.0" />
+                           </font></Label>
                      </children></AnchorPane>
               </items>
             </SplitPane>
@@ -121,11 +137,17 @@
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                      <children>
                         <Button layoutX="460.0" layoutY="1.0" mnemonicParsing="false" onAction="#deleteNote2" text="Delete" />
-                        <Label fx:id="noteTitle2" layoutX="8.0" layoutY="5.0" prefHeight="17.0" prefWidth="440.0" />
+                        <Label fx:id="noteTitle2" layoutX="8.0" layoutY="5.0" prefHeight="17.0" prefWidth="440.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font></Label>
                      </children></AnchorPane>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                      <children>
-                        <Label fx:id="noteText2" alignment="TOP_LEFT" layoutX="14.0" layoutY="12.0" prefHeight="129.0" prefWidth="487.0" wrapText="true" />
+                        <Label fx:id="noteText2" alignment="TOP_LEFT" layoutX="14.0" layoutY="12.0" prefHeight="129.0" prefWidth="487.0" wrapText="true">
+                           <font>
+                              <Font size="15.0" />
+                           </font></Label>
                      </children></AnchorPane>
               </items>
             </SplitPane>
@@ -134,11 +156,17 @@
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="26.0" prefWidth="511.0">
                      <children>
                         <Button layoutX="460.0" layoutY="1.0" mnemonicParsing="false" onAction="#deleteNote3" text="Delete" />
-                        <Label fx:id="noteTitle3" layoutX="7.0" layoutY="5.0" prefHeight="17.0" prefWidth="444.0" />
+                        <Label fx:id="noteTitle3" layoutX="7.0" layoutY="5.0" prefHeight="17.0" prefWidth="444.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font></Label>
                      </children></AnchorPane>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                      <children>
-                        <Label fx:id="noteText3" alignment="TOP_LEFT" layoutX="7.0" layoutY="6.0" prefHeight="133.0" prefWidth="491.0" wrapText="true" />
+                        <Label fx:id="noteText3" alignment="TOP_LEFT" layoutX="7.0" layoutY="6.0" prefHeight="133.0" prefWidth="491.0" wrapText="true">
+                           <font>
+                              <Font size="15.0" />
+                           </font></Label>
                      </children></AnchorPane>
               </items>
             </SplitPane>
@@ -147,11 +175,17 @@
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                      <children>
                         <Button layoutX="460.0" layoutY="1.0" mnemonicParsing="false" onAction="#deleteNote4" text="Delete" />
-                        <Label fx:id="noteTitle4" layoutX="12.0" layoutY="5.0" prefHeight="17.0" prefWidth="443.0" />
+                        <Label fx:id="noteTitle4" layoutX="12.0" layoutY="5.0" prefHeight="17.0" prefWidth="443.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font></Label>
                      </children></AnchorPane>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                      <children>
-                        <Label fx:id="noteText4" alignment="TOP_LEFT" layoutX="5.0" layoutY="6.0" prefHeight="110.0" prefWidth="497.0" wrapText="true" />
+                        <Label fx:id="noteText4" alignment="TOP_LEFT" layoutX="5.0" layoutY="6.0" prefHeight="110.0" prefWidth="497.0" wrapText="true">
+                           <font>
+                              <Font size="15.0" />
+                           </font></Label>
                      </children></AnchorPane>
               </items>
             </SplitPane>
@@ -160,11 +194,17 @@
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                      <children>
                         <Button layoutX="460.0" mnemonicParsing="false" onAction="#deleteNote5" text="Delete" />
-                        <Label fx:id="noteTitle5" layoutX="8.0" layoutY="4.0" prefHeight="17.0" prefWidth="441.0" />
+                        <Label fx:id="noteTitle5" layoutX="8.0" layoutY="4.0" prefHeight="17.0" prefWidth="441.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font></Label>
                      </children></AnchorPane>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                      <children>
-                        <Label fx:id="noteText5" alignment="TOP_LEFT" layoutX="2.0" layoutY="4.0" prefHeight="111.0" prefWidth="497.0" wrapText="true" />
+                        <Label fx:id="noteText5" alignment="TOP_LEFT" layoutX="2.0" layoutY="4.0" prefHeight="111.0" prefWidth="497.0" wrapText="true">
+                           <font>
+                              <Font size="15.0" />
+                           </font></Label>
                      </children></AnchorPane>
               </items>
             </SplitPane>

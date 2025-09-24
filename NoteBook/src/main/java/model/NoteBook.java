@@ -45,11 +45,17 @@ public class NoteBook {
     }
 
     private void addNotes() {
-        notes.add(new Note("Ripuli", "Ripuli on märkää kakkaa"));
-        notes.add(new Note("Kakka", "Kakka on kuivaa ripulia"));
-        notes.add(new Note("Note", "Hieno note jeejee"));
-        notes.add(new Note("Kauppalista", "Kurkku, rasvaa, kondoomi"));
-        notes.add(new Note("Tärkee!!", "En uskalla puhua tytöille :("));
+        notes.add(new Note("" +
+                "Esimerkki note1", "Muista, että banaani kypsyy nopeammin paperipussissa. Älä kuitenkaan unohda " +
+                "sitä viikoksi."));
+        notes.add(new Note("Esimerkki note2", "" +
+                "Pilven varjo näytti hetken kuin kartalta, jossa meri oli keskellä metsää. Ei jatkotoimia."));
+        notes.add(new Note("Esimerkki note3", "" +
+                "Jos teepussi putoaa lattialle, se muuttuu siivousprojektiksi. Tee uusi."));
+        notes.add(new Note("Esimerkki note4", "" +
+                "Post-it, jossa luki “älä unohda”, katosi. Ironia hyväksytään"));
+        notes.add(new Note("Esimerkki note5", "" +
+                "Tyhjä lasipurkki tuntuu painavalta, kun se on täynnä odotuksia. Sulje kansi silti."));
         System.out.println(notes.size());
     }
 }
